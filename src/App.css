@@ -2,30 +2,241 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #f4f5f7;
+  min-height: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a.link, a.last {
+  color: rgb(109, 46, 95);
+  text-decoration: none;
+  border-right: 1px solid;
+  padding: 0 7px;
+}
+
+a.last {
+  border-right: 0px;
+}
+a.settings, a.profile, a.homeview {
+  color: rgb(48, 46, 46);
+  text-decoration: none;
+}
+
+.btn {
+  min-height: 5vh;
+  height: 50px;
+  width: 20.5%;
+  font-size:large;
+  font-weight: bolder;
+  background-color: rgb(233, 73, 73);
+  color: #f4f5f7;
+  margin-top:20px;
+  margin-bottom: 60px;
+  border-radius: 9px;
+  letter-spacing: 1.3px;
+  box-shadow: 0px 2px 8px rgb(63, 43, 43);
+  
+}
+
+div.farmpets {
+  border: 1px solid grey; 
+  width: 9%; 
+  line-height: 50px; 
+  padding-right: 10px;
+}
+
+div.animals {
+  margin-left: 100px;
+}
+
+.clickmecount {
+  display:table;
+  padding-left: 600px;
+  padding-bottom: 300px;
+  text-align: center;
+  width: 20%;
+  height: 40%;
+  font-size: large;
+}
+
+.countclick, .click, .clickbuttons{
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: rgb(216, 212, 212);
+}
+.clickbuttons {
+  margin:10px;
+  margin-bottom: 300px;
+}
+
+div.farmpetslist, form {
+  padding-bottom: 100px;
+}
+div.clickme {
+  padding-bottom: 300px;
+}
+
+div.jokesboard {
+  display:inline-flex;
+  border: 1px solid rgb(233, 227, 227);
+  width:750px;
+  height: 230px;
+  margin-bottom: 200px;
+  background-color: rgb(202, 230, 208);
+
+}
+
+div.joke {
+  display: block; 
+  border: 1px solid rgb(206, 201, 201);
+  height: 170px;
+  width:325px;
+  margin-top: 30px;
+  margin-left:30px;
+  box-shadow: 0px 2px 8px rgb(218, 213, 213);
+  border-radius: 9px;
+  background-color: white;
+}
+
+div.hello {
+  display: block;
+  background-color: gold;
+  width: 500px;
+  height: 250px;
+  text-align: center;
+  margin:100px 500px 100px;
+  padding-top: 230px;
+}
+
+div.users {
+  display:inline-table;
+  border: 1px solid rgb(233, 227, 227);
+  width:820px;
+  height: 1300px;
+  margin-bottom: 25px;
+  background-color: rgb(202, 230, 208);
+
+}
+div.user-profilecard {
+  display: inline-block;
+  background-color: transparent;
+  width: 350px;
+  height: 370px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: aliceblue;
+  perspective: 1000px;
+
+}
+
+div.profilecard-inner {
+  display:inline-block;
+  position: relative;
+  width: 350px;
+  height: 370px;
+  border-radius: 15px;
+  text-align: center;
+  transition:all 0.5s;
+  transition-property:all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+  transform-style: preserve-3d;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+  background-color: aliceblue;
+}
+
+.user-profilecard:hover{
+  transform: perspective(1000px) rotateY(180deg);
+  transform-style: preserve-3d;
+  -webkit-transition: ease-in-out;
+    transition: 0.8s ease-in-out; 
+}
+.user-profilecard-inner{
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.flip-profilecard-front, .flip-profilecard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-profilecard-front {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.flip-profilecard-back {
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+img {
+  width:250px;
+  height:250px;
+}
+
+
+.input {
+  min-height: 5vh;
+  height: 45px;
+  width: 20%;
+  border-radius: 9px;
+  margin-top:10px;
+  border-color: rgb(230, 218, 218);
+}
+.input:focus {
+  border: 2px solid black;
+}
+
+li.farmpets {
+  list-style:outside;
+  width: 7px;
+}
+
+li.link {
+  display:inline-block; 
+  list-style: none;
+}
+
+p {
+  text-align: left;
+  margin-left:35px;
+}
+p.setup {
+  font-weight: bold;
+  font-size:22px;
+  text-align: center;
+  margin-right: 35px;
+}
+p.punchline {
+  text-align: center;
+  margin-right: 23px;
+  font-size:15px;
+}
+p.text {
+  margin-left: 320px;
+  margin-bottom:50px;
+}
+ul {
+ margin-left:35px;
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +245,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
